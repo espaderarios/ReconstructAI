@@ -89,11 +89,10 @@ export async function humanizeText(
     const response = await client.chat.completions.create({
       model: 'mixtral-8x7b-32768',
       max_tokens: 2048,
-      system: systemPrompt,
       messages: [
         {
           role: 'user',
-          content: `Please humanize the following text:\n\n${text}`
+          content: `${systemPrompt}\n\nPlease humanize the following text:\n\n${text}`
         }
       ]
     })
