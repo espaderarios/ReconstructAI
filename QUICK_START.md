@@ -196,6 +196,20 @@ Always use `.env.example` as a template for other developers.
 
 ---
 
-Happy humanizing! 🎉
+---
 
-For detailed documentation, see [README.md](README.md) and [DEVELOPMENT.md](DEVELOPMENT.md)
+## 🌐 Ready to Deploy?
+
+After testing locally, deploy your app **for free**:
+
+→ **[Full Deployment Guide](DEPLOYMENT.md)**
+
+**Deployed in 5 minutes on:**
+- **Frontend**: GitHub Pages (`https://your-github.io/ReconstructAI`)
+- **Backend**: Render.com (free tier)
+- **AI**: Groq (free tier)
+
+---
+
+Happy humanizing! 🎉
+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

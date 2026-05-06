@@ -2,6 +2,8 @@
 
 A full-stack application that uses AI to humanize text with customizable tone and writing style preferences.
 
+🌐 **[Live Demo](https://YOUR_USERNAME.github.io/ReconstructAI)** | 📖 **[Deployment Guide](DEPLOYMENT.md)** | 🚀 **[Quick Start](QUICK_START.md)**
+
 ## Features
 
 ✨ **Multiple Tone Options**
@@ -19,6 +21,12 @@ A full-stack application that uses AI to humanize text with customizable tone an
 - Formal preset
 - Conversational preset
 - Friendly preset
+
+## Quick Links
+
+- 📚 **[Development Guide](DEVELOPMENT.md)** - Set up your local environment
+- 🚀 **[Deployment Guide](DEPLOYMENT.md)** - Deploy to GitHub Pages + Render.com
+- ⚡ **[Quick Start](QUICK_START.md)** - Get running in 5 minutes
 
 ## Project Structure
 

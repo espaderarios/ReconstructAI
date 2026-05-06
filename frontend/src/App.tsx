@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import axios from 'axios'
+import { humanizeText } from './api'
 import './App.css'
 import TextInput from './components/TextInput'
 import ToneSelector from './components/ToneSelector'
@@ -36,12 +36,8 @@ function App() {
 
     setLoading(true)
     try {
-      const response = await axios.post('/api/humanize', {
-        text: inputText,
-        tone,
-        writingStyle
-      })
-      setOutputText(response.data.humanizedText)
+      const result = await humanizeText(inputText, tone, writingStyle)
+      setOutputText(result)
     } catch (error) {
       console.error('Error humanizing text:', error)
       alert('Failed to humanize text. Please try again.')
