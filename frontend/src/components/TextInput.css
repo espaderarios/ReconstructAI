@@ -1,0 +1,46 @@
+.text-input-container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  gap: 12px;
+}
+
+.text-input-container label {
+  font-weight: 600;
+  color: #333;
+  font-size: 0.95rem;
+}
+
+.textarea {
+  flex: 1;
+  padding: 16px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1rem;
+  resize: none;
+  transition: all 0.3s ease;
+  min-height: 300px;
+}
+
+.textarea:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.textarea::placeholder {
+  color: #999;
+}
+
+.stats {
+  display: flex;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #666;
+  padding: 0 4px;
+}
+
+.stats span:nth-child(2) {
+  margin: 0 4px;
+}

@@ -1,0 +1,55 @@
+.tone-selector {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 12px;
+  padding: 20px;
+  color: white;
+  box-shadow: 0 4px 15px rgba(102, 126, 234, 0.2);
+}
+
+.tone-selector label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 14px;
+  font-size: 0.95rem;
+}
+
+.tone-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.tone-button {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 16px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 0.95rem;
+  font-weight: 500;
+}
+
+.tone-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.5);
+  transform: translateX(4px);
+}
+
+.tone-button.active {
+  background: rgba(255, 255, 255, 0.25);
+  border-color: white;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.3);
+}
+
+.tone-button .emoji {
+  font-size: 1.2rem;
+}
+
+.tone-button .label {
+  flex: 1;
+}
