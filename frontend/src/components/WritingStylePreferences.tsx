@@ -1,28 +1,24 @@
 import { useState } from 'react'
 import './WritingStylePreferences.css'
 
+type Tone = 'professional' | 'semi-professional' | 'casual'
+
 type WritingStyle = {
   useContractions: boolean
   useSlang: boolean
   useExclamations: boolean
   sentenceLength: 'short' | 'medium' | 'long'
-  tone: string
+  tone: Tone
 }
-
-type Tone = 'professional' | 'semi-professional' | 'casual'
 
 interface WritingStylePreferencesProps {
   writingStyle: WritingStyle
   onStyleChange: (style: WritingStyle) => void
-  currentTone: Tone
-  setCurrentTone: (tone: Tone) => void
 }
 
 export default function WritingStylePreferences({
   writingStyle,
-  onStyleChange,
-  currentTone,
-  setCurrentTone
+  onStyleChange
 }: WritingStylePreferencesProps) {
   const [isExpanded, setIsExpanded] = useState(false)
 
@@ -43,7 +39,6 @@ export default function WritingStylePreferences({
   const applyPreset = (preset: string) => {
     switch (preset) {
       case 'formal':
-        setCurrentTone('professional')
         onStyleChange({
           ...writingStyle,
           tone: 'professional',
@@ -54,7 +49,6 @@ export default function WritingStylePreferences({
         })
         break
       case 'friendly':
-        setCurrentTone('casual')
         onStyleChange({
           ...writingStyle,
           tone: 'casual',
@@ -65,7 +59,6 @@ export default function WritingStylePreferences({
         })
         break
       case 'conversational':
-        setCurrentTone('semi-professional')
         onStyleChange({
           ...writingStyle,
           tone: 'semi-professional',

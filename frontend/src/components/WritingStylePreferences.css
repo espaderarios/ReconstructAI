@@ -82,6 +82,7 @@
   cursor: pointer;
   font-size: 0.9rem;
   color: #333;
+  -webkit-user-select: none;
   user-select: none;
 }
 
@@ -120,6 +121,7 @@
   cursor: pointer;
   font-size: 0.9rem;
   color: #333;
+  -webkit-user-select: none;
   user-select: none;
 }
 

@@ -76,8 +76,6 @@ function App() {
           <WritingStylePreferences
             writingStyle={writingStyle}
             onStyleChange={setWritingStyle}
-            currentTone={tone}
-            setCurrentTone={setTone}
           />
 
           <button 
