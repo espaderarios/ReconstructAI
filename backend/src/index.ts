@@ -8,8 +8,28 @@ dotenv.config()
 const app = express()
 const PORT = process.env.PORT || 3000
 
+const allowedOrigins = new Set([
+  'https://espaderarios.github.io',
+  'http://localhost:5173',
+  'http://127.0.0.1:5173'
+])
+
+const corsOptions = {
+  origin(origin: string | undefined, callback: (error: Error | null, allow?: boolean) => void) {
+    if (!origin || allowedOrigins.has(origin)) {
+      callback(null, true)
+      return
+    }
+
+    callback(new Error('Not allowed by CORS'))
+  },
+  methods: ['GET', 'POST', 'OPTIONS'],
+  allowedHeaders: ['Content-Type']
+}
+
 // Middleware
-app.use(cors())
+app.use(cors(corsOptions))
+app.options('*', cors(corsOptions))
 app.use(express.json())
 
 // Health check
