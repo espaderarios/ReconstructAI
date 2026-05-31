@@ -4,12 +4,12 @@
   "description": "AI-powered text humanizer with customizable tones and styles",
   "private": true,
   "scripts": {
-    "install-all": "npm install && cd frontend && npm install && cd ../backend && npm install && cd ..",
-    "dev": "concurrently \"cd frontend && npm run dev\" \"cd backend && npm run dev\"",
-    "dev:frontend": "cd frontend && npm run dev",
+    "install-all": "npm install && cd docs && npm install && cd ../backend && npm install && cd ..",
+    "dev": "concurrently \"cd docs && npm run dev\" \"cd backend && npm run dev\"",
+    "dev:frontend": "cd docs && npm run dev",
     "dev:backend": "cd backend && npm run dev",
     "build": "npm run build:frontend && npm run build:backend",
-    "build:frontend": "cd frontend && npm run build",
+    "build:frontend": "cd docs && npm run build",
     "build:backend": "cd backend && npm run build",
     "build:all": "npm run build",
     "start": "cd backend && npm start"

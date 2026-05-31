@@ -29,12 +29,12 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd frontend
+          cd docs
           npm install
 
       - name: Build React app
         run: |
-          cd frontend
+          cd docs
           npm run build
         env:
           VITE_API_URL: https://humanizer-ai-backend.onrender.com
@@ -42,7 +42,7 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: 'frontend/dist'
+          path: 'docs/dist'
 
   deploy:
     environment:
